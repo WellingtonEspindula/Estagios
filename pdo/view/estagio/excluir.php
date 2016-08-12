@@ -8,7 +8,7 @@
         $daoestagio = DaoEstagio::getInstance();
         $daoestagio->Deletar($id);
         
-        header('Location: view.php');
+        header('Location: index.php');
     }
 
 ?>

@@ -29,7 +29,8 @@ class DaoConcedente {
       cargo_representante,
       uf,
       rg_representante, 
-      emissor_rg_representante, 
+      emissor_rg_representante,
+      expedicao_rg_representante,
       cpf_representante,
 	  convenio)
       VALUES (
@@ -47,6 +48,7 @@ class DaoConcedente {
 	  :uf,
 	  :rg_representante,
 	  :emissor_rg_representante,
+	  :expedicao_rg_representante,
 	  :cpf_representante,
 	  :convenio)";
 	  	
@@ -65,6 +67,7 @@ class DaoConcedente {
  $p_sql->bindValue(":uf",$concedente->getuf());
  $p_sql->bindValue(":rg_representante",$concedente->getRg_representante());
  $p_sql->bindValue(":emissor_rg_representante",$concedente->getEmissor_rg_representante());
+ $p_sql->bindValue(":expedicao_rg_representante",$concedente->getExpedicao_rg_representante());
  $p_sql->bindValue(":cpf_representante",$concedente->getCpf_representante());
  $p_sql->bindValue(":convenio",$concedente->getConvenio());
  
@@ -90,6 +93,7 @@ class DaoConcedente {
 	    uf=:uf,
 	    rg_representante=:rg_representante,
 	    emissor_rg_representante=:emissor_rg_representante,
+	    expedicao_rg_representante=:expedicao_rg_representante,
 	    cpf_representante=:cpf_representante,
      convenio  = :convenio 
      WHERE id_concedente = :id_concedente";
@@ -107,6 +111,7 @@ class DaoConcedente {
    $p_sql->bindValue(":uf",$concedente->getUf());
    $p_sql->bindValue(":rg_representante",$concedente->getRg_representante());
    $p_sql->bindValue(":emissor_rg_representante",$concedente->getEmissor_rg_representante());
+   $p_sql->bindValue(":expedicao_rg_representante",$concedente->getExpedicao_rg_representante());
    $p_sql->bindValue(":cpf_representante",$concedente->getCpf_representante());
    $p_sql->bindValue(":id_concedente",$concedente->getId_concedente()); 
    $p_sql->bindValue(":convenio",$concedente->getConvenio()); 
@@ -152,7 +157,8 @@ class DaoConcedente {
   $pojo->setCargo_representante($row['CARGO_REPRESENTANTE']); 
   $pojo->setUf($row['UF']); 
   $pojo->setRg_representante($row['RG_REPRESENTANTE']); 
-  $pojo->setEmissor_rg_representante($row['EMISSOR_RG_REPRESENTANTE']); 
+  $pojo->setEmissor_rg_representante($row['EMISSOR_RG_REPRESENTANTE']);
+  $pojo->setExpedicao_rg_representante($row['EXPEDICAO_RG_REPRESENTANTE']); 
   $pojo->setCpf_representante($row['CPF_REPRESENTANTE']); 
   $pojo->setId_concedente($row['ID_CONCEDENTE']); 
   $pojo->setConvenio($row['CONVENIO']); 
@@ -180,6 +186,7 @@ class DaoConcedente {
 				$pojo->setUf($row['UF']); 
 				$pojo->setRg_representante($row['RG_REPRESENTANTE']); 
 				$pojo->setEmissor_rg_representante($row['EMISSOR_RG_REPRESENTANTE']); 
+				$pojo->setExpedicao_rg_representante($row['EXPEDICAO_RG_REPRESENTANTE']); 
 				$pojo->setCpf_representante($row['CPF_REPRESENTANTE']); 
 				$pojo->setConvenio($row['CONVENIO']); 
  

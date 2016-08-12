@@ -8,7 +8,7 @@
         $daoorientador = DaoOrientador::getInstance();
         $daoorientador->Deletar($id);
         
-        header('Location: view.php');
+        header('Location: index.php');
     }
 
 ?>

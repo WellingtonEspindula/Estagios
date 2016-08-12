@@ -17,6 +17,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 	<body>
+	<header align ="center">
+	  <img align="left" src="../../logo.jpg" height="50" width="50">
+	  <h2>Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - <i>Campus</i> Osório</h2>
+	  <h2>Sistema de Gerenciamento de Estágios</h2>
+    </header>
 	 <form id="formulario" method="post" action="">
 	 <div align ="center"id="texto">
 	 <table>
@@ -33,7 +38,7 @@
  	?>
  		<tr>
     	<td>CPF:</td>
-    	<td><input class="cpfBR" required type="text" name="cpf" size="30" /></td>
+    	<td><input class="cpf" required type="text" name="cpf" size="30" /></td>
     	</tr>
     <?php } ?>
 	 <tr>
@@ -86,10 +91,15 @@
 	</tr>
 	<tr>
 	<td colspan="2" align="center"><input name="formulario" type="submit" value="enviar"/></td>
+	<a href="index.php" ><input type="button" name="cancelar" value="Cancelar e voltar à página anterior"></a><br><br>
 	</div>
 	</tr>
 	 </table>
 	</form>
+	<footer align ="center">
+      <p>Desenvolvido por: Mateus Arenhardt de Souza</p>
+      <p>Contato: <a href="mailto:mateus.are@hotmail.com"> mateus.are@hotmail.com</a>.</p>
+     </footer>
 	</body>
 	</html>
 
@@ -138,8 +148,7 @@
 		}
    
     	
-    	header('Location: view.php');
-    	echo "<script type='text/javascript'> location.href ='view.php' </script>";
+    	echo "<script type='text/javascript'> location.href ='index.php' </script>";
   }
 
      

@@ -8,7 +8,7 @@
         $daosituacao = DaoSituacao::getInstance();
         $daosituacao->Deletar($id);
         
-        header('Location: view.php');
+        header('Location: index.php');
     }
 
 ?>

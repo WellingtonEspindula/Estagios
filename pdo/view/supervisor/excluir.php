@@ -8,7 +8,7 @@
         $daosupervisor = DaoSupervisor::getInstance();
         $daosupervisor->Deletar($id);
         
-        header('Location: view.php');
+        header('Location: index.php');
     }
 
 ?>

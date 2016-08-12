@@ -8,7 +8,7 @@
         $daoconcedente = DaoConcedente::getInstance();
         $daoconcedente->Deletar($id);
         
-        header('Location: view.php');
+        header('Location: index.php');
     }
 
 ?>

@@ -8,7 +8,7 @@
         $daoestagiario = DaoEstagiario::getInstance();
         $daoestagiario->Deletar($id);
         
-        header('Location: view.php');
+        header('Location: index.php');
     }
 
 ?>

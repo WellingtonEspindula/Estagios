@@ -13,7 +13,8 @@
  private $cargo_representante; 
  private $uf; 
  private $rg_representante; 
- private $emissor_rg_representante; 
+ private $emissor_rg_representante;
+ private $expedicao_rg_representante;
  private $cpf_representante;
  private $convenio;
 
@@ -106,6 +107,12 @@
  } 
  public function setEmissor_rg_representante($emissor_rg_representante) {
  $this->emissor_rg_representante = $emissor_rg_representante; 
+ }
+ public function getExpedicao_rg_representante() {
+ return $this->expedicao_rg_representante; 
+ } 
+ public function setExpedicao_rg_representante($expedicao_rg_representante) {
+ $this->expedicao_rg_representante = $expedicao_rg_representante; 
  }
    public function getCpf_representante() {
  return $this->cpf_representante; 

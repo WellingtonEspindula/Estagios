@@ -15,6 +15,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 	<body>
+	<header align ="center">
+	  <img align="left" src="../../logo.jpg" height="50" width="50">
+	  <h2>Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - <i>Campus</i> Osório</h2>
+	  <h2>Sistema de Gerenciamento de Estágios</h2>
+    </header>
 	 <form id="formulario" method="post" action="">
 	 <div align ="center"id="texto">
 	 <table>
@@ -79,6 +84,10 @@
 	    <td><input required type="text" value="<?= $alteracao ? $pojo_concedente->getEmissor_rg_representante() : "" ?>" name="emissor_rg_representante" size="30" /></td>
 	</tr>
 	<tr>
+	    <td>Data de Expedição do RG do Representante:</td>
+	    <td><input required class="date" type="text" value="<?= $alteracao ? $pojo_concedente->getExpedicao_rg_representante() : "" ?>" name="expedicao_rg_representante" size="30" /></td>
+	</tr>
+	<tr>
 	    <td>CPF do Representante:</td>
 	    <td><input class="cpf" required type="text" value="<?= $alteracao ? $pojo_concedente->getCpf_representante() : "" ?>" name="cpf_representante" size="30" /></td>
 	</tr>
@@ -88,10 +97,15 @@
 	</tr>
 	<tr>
 	<td colspan="2" align="center"><input name="formulario" type="submit" value="enviar"/></td>
+	<a href="index.php" ><input type="button" name="cancelar" value="Cancelar e voltar à página anterior"></a><br><br>
 	</div>
 	</tr>
 	 </table>
 	</form>
+	<footer>
+      <p>Desenvolvido por: Mateus Arenhardt de Souza</p>
+      <p>Contato: <a href="mailto:mateus.are@hotmail.com"> mateus.are@hotmail.com</a>.</p>
+     </footer>
 	</body>
 	</html>
 
@@ -128,6 +142,8 @@
     	$pojo_concedente->setRg_representante($rg_representante);
     	$emissor_rg_representante = $_POST["emissor_rg_representante"];
     	$pojo_concedente->setEmissor_rg_representante($emissor_rg_representante);
+    	$expedicao_rg_representante = $_POST["expedicao_rg_representante"];
+    	$pojo_concedente->setExpedicao_rg_representante($expedicao_rg_representante);
     	$cpf_representante = $_POST["cpf_representante"];
     	$pojo_concedente->setCpf_representante($cpf_representante);
 	    $convenio = $_POST["convenio"];
@@ -144,7 +160,7 @@
 		}
    
     	
-    	echo "<script type='text/javascript'> location.href ='view.php' </script>";
+    	echo "<script type='text/javascript'> location.href ='index.php' </script>";
   }
 
      

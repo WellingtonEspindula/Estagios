@@ -23,14 +23,38 @@
 
 <html>
     <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Estágios</title>
 	<link rel="SHORTCUT ICON" href="../../logo.jpg">
     <link REL="STYLESHEET" TYPE="text/css" HREF="../../css.css">
     <?php include_once "../../scripts.php"; ?>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 	<body>
+	<style>
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  .page {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+  }
+  footer, .push {
+    height: 4em;
+  }
+
+  </style>
+	<header align ="center">
+	  <img align="left" src="../../logo.jpg" height="50" width="50">
+	  <h2>Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - <i>Campus</i> Osório</h2>
+	  <h2>Sistema de Gerenciamento de Estágios</h2>
+    </header>
 	 <form id="formulario" method="post" action="">
+	 <div class="page">
 	 <div align="center" id="texto">
 	 <table>
 	 	<?php
@@ -84,7 +108,14 @@
 	</tr>
 	<tr>
 	    <td>Turno:</td>
-	    <td><input required type="text" value="<?= $alteracao ? $pojo_estagio->getTurno() : '' ?>" name="turno" size="30" /></td>
+	    <td>
+	    	<select required name="turno">
+		    		<option <?= ($alteracao && ($pojo_estagio->getTurno() == "manhã")) ? "selected " : ' ' ?> value="manha">Manhã</option>
+		    		<option <?= ($alteracao && ($pojo_estagio->getTurno() == "tarde")) ? "selected " : ' ' ?> value="tarde">Tarde</option>
+		    		<option <?= ($alteracao && ($pojo_estagio->getTurno() == "noite")) ? "selected " : ' ' ?> value="noite">Noite</option>
+		    		<option <?= ($alteracao && ($pojo_estagio->getTurno() == "integral")) ? "selected " : ' ' ?> value="integral">Integral</option>
+		    	</select>
+	    </td>
 	</tr>
 	<tr>
 	    <td>Alimentação:</td>
@@ -219,10 +250,18 @@
 	</tr>
 	<tr>
 	<td colspan="2" align="center"><input name="formulario" type="submit" value="enviar"/></td>
+	<a href="index.php" ><input type="button" name="cancelar" value="Cancelar e voltar à página anterior"></a><br><br>
 	</div>
 	</tr>
 	 </table>
 	</form>
+	<div class="push"></div>
+  </div>
+	<footer align="center" style="vertical-align: middle; position: relative;  margin-left: 20px;">
+      <p>Desenvolvido por: Mateus Arenhardt de Souza</p>
+      <p>Contato: <a href="mailto:mateus.are@hotmail.com"> mateus.are@hotmail.com</a>.</p>
+     </footer>
+     </div>
 	</body>
 	</html>
 
@@ -285,7 +324,7 @@
 		}
    
     	
-    	echo "<script type='text/javascript'> location.href ='view.php' </script>";
+    	echo "<script type='text/javascript'> location.href ='index.php' </script>";
   }
 
 

@@ -3343,3 +3343,41 @@
 [26-Jul-2016 02:15:40 UTC] PHP Stack trace:
 [26-Jul-2016 02:15:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/concedente/concedente.php:0
 [26-Jul-2016 02:15:40 UTC] PHP   2. header() /home/ubuntu/workspace/pdo/view/concedente/concedente.php:147
+[30-Jul-2016 16:34:41 UTC] PHP Warning:  require_once(../admin/conexao.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/pdo/dao/daoestagiario.php on line 2
+[30-Jul-2016 16:34:41 UTC] PHP Stack trace:
+[30-Jul-2016 16:34:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/estagiario/index.php:0
+[30-Jul-2016 16:34:41 UTC] PHP   2. require_once() /home/ubuntu/workspace/pdo/view/estagiario/index.php:4
+[30-Jul-2016 16:34:41 UTC] PHP Fatal error:  require_once(): Failed opening required '../admin/conexao.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/pdo/dao/daoestagiario.php on line 2
+[30-Jul-2016 16:34:41 UTC] PHP Stack trace:
+[30-Jul-2016 16:34:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/estagiario/index.php:0
+[30-Jul-2016 16:34:41 UTC] PHP   2. require_once() /home/ubuntu/workspace/pdo/view/estagiario/index.php:4
+[30-Jul-2016 17:07:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/pdo/scripts.php:167) in /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php on line 151
+[30-Jul-2016 17:07:31 UTC] PHP Stack trace:
+[30-Jul-2016 17:07:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php:0
+[30-Jul-2016 17:07:31 UTC] PHP   2. header() /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php:151
+[30-Jul-2016 17:08:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/pdo/scripts.php:167) in /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php on line 151
+[30-Jul-2016 17:08:08 UTC] PHP Stack trace:
+[30-Jul-2016 17:08:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php:0
+[30-Jul-2016 17:08:08 UTC] PHP   2. header() /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php:151
+[30-Jul-2016 17:10:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/pdo/scripts.php:167) in /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php on line 151
+[30-Jul-2016 17:10:21 UTC] PHP Stack trace:
+[30-Jul-2016 17:10:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php:0
+[30-Jul-2016 17:10:21 UTC] PHP   2. header() /home/ubuntu/workspace/pdo/view/estagiario/estagiario.php:151
+[03-Aug-2016 05:39:23 UTC] PHP Warning:  fopen(admin/logs/error.log): failed to open stream: No such file or directory in /home/ubuntu/workspace/pdo/admin/geralog.php on line 20
+[03-Aug-2016 05:39:23 UTC] PHP Stack trace:
+[03-Aug-2016 05:39:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/instituicao_de_ensino/excluir.php:0
+[03-Aug-2016 05:39:23 UTC] PHP   2. DaoInstituicao->Deletar() /home/ubuntu/workspace/pdo/view/instituicao_de_ensino/excluir.php:9
+[03-Aug-2016 05:39:23 UTC] PHP   3. GeraLog->inserirLog() /home/ubuntu/workspace/pdo/dao/daoinstituicao.php:109
+[03-Aug-2016 05:39:23 UTC] PHP   4. fopen() /home/ubuntu/workspace/pdo/admin/geralog.php:20
+[03-Aug-2016 05:39:23 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/pdo/admin/geralog.php on line 21
+[03-Aug-2016 05:39:23 UTC] PHP Stack trace:
+[03-Aug-2016 05:39:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/instituicao_de_ensino/excluir.php:0
+[03-Aug-2016 05:39:23 UTC] PHP   2. DaoInstituicao->Deletar() /home/ubuntu/workspace/pdo/view/instituicao_de_ensino/excluir.php:9
+[03-Aug-2016 05:39:23 UTC] PHP   3. GeraLog->inserirLog() /home/ubuntu/workspace/pdo/dao/daoinstituicao.php:109
+[03-Aug-2016 05:39:23 UTC] PHP   4. fwrite() /home/ubuntu/workspace/pdo/admin/geralog.php:21
+[03-Aug-2016 05:39:23 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/pdo/admin/geralog.php on line 22
+[03-Aug-2016 05:39:23 UTC] PHP Stack trace:
+[03-Aug-2016 05:39:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/view/instituicao_de_ensino/excluir.php:0
+[03-Aug-2016 05:39:23 UTC] PHP   2. DaoInstituicao->Deletar() /home/ubuntu/workspace/pdo/view/instituicao_de_ensino/excluir.php:9
+[03-Aug-2016 05:39:23 UTC] PHP   3. GeraLog->inserirLog() /home/ubuntu/workspace/pdo/dao/daoinstituicao.php:109
+[03-Aug-2016 05:39:23 UTC] PHP   4. fclose() /home/ubuntu/workspace/pdo/admin/geralog.php:22
